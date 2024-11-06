@@ -1,0 +1,76 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000; /* Change this color as needed */
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main shop container */
+.shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 1rem; /* Optional: adds space between items */
+}
+
+.shop {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px; /* Set a fixed width for each shop item */
+    height: 350px; /* Set a fixed height for each shop item */
+    text-align: center;
+    margin: 1rem;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content vertically */
+}
+
+.shop:hover {
+    transform: scale(1.05);
+}
+
+
+/* Footer styles */
+.footer {
+    padding: 10px; /* Adjust the padding to make the footer height shorter */
+    font-size: 12px; /* Adjust font size to make text smaller */
+    line-height: 1.2; /* Adjust line height to reduce spacing between lines */
+    text-align: center; /* Center-align text */
+}
+
+.footer p {
+    margin: 0; /* Remove any default margin around the paragraph */
+}

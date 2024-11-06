@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lifestyle Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('backgorund.jpg'); /* Use the uploaded file path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .header {
+            background-color: rgba(236, 170, 181, 0.8); /* Slightly transparent for visibility */
+            color: white; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav ul li {
+            display: inline; 
+            margin: 0 15px; 
+        }
+
+        .nav ul li a {
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline; 
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+
+        .shop {
+            background-color: #ffe5d4;
+            border: 1px solid #111011;
+            border-radius: 8px;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            margin: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .shop:hover {
+            transform: scale(1.05);
+        }
+
+        .shop h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+
+        .shop p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .shop-btn {
+            background-color: #dd5a76;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.0rem;
+            font-size: 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .shop-btn:hover {
+            background-color: #e06941;
+        }
+
+        .footer {
+            background-color: #ecaab5;
+            color: #070606;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .footer.hidden {
+            transform: translateY(100%);
+        }
+
+        .shop img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>The Lifestyle Hub</h1>
+        <p>Your one-stop shop for all things delightful!</p>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shop-container">
+        <section class="shop" id="boutique">
+            <h2>Boutique</h2>
+            <img src="Via.jpg" alt="VC Boutique Logo">
+            <p>Explore our curated fashion collections and accessories!</p>
+            <button class="shop-btn">Shop Now</button>
+        </section>
+        <section class="shop" id="barbecue">
+            <h2>Barbecue</h2>
+            <img src="fyang.png" alt="Barbecue Haven">
+            <p>Indulge in smoky flavors and grilled goodness!</p>
+            <button class="shop-btn">Order Now</button>
+        </section>
+        <section class="shop" id="bakery">
+            <h2>Bakery</h2>
+            <img src="mai.jpg" alt="Bakery Logo">
+            <p>Freshly baked goods just for you!</p>
+            <button class="shop-btn">Order Now</button>
+        </section>
+        <section class="shop" id="milktea">
+            <h2>Milk Tea</h2>
+            <img src="Jess.jpg" alt="milktea">
+            <p>Enjoy a refreshing bubble tea experience.</p>
+            <button class="shop-btn">Order Now</button>
+        </section>
+        <section class="shop" id="desserts">
+            <h2>Desserts</h2>
+            <img src="armalyn.jpg" alt="Desserts">
+            <p>Satisfy your sweet cravings with our delicious desserts.</p>
+            <button class="shop-btn">Order Now</button>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <p>© 2024 The Lifestyle Hub. All rights reserved. BSCS 3-A <br>Via Joyce Coral<br>Rafaella Jane Peañar<br>Mailyn Alvior<br>Jessa Marijuan<br>Armalyn Geganto</p>
+    </footer>
+    
+    <script>
+        let lastScrollTop = 0;
+        const footer = document.getElementById('footer');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                footer.classList.add('hidden');
+            } else {
+                // Scrolling up
+                footer.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html>
